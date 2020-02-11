@@ -1,0 +1,184 @@
+The system is: Linux - 5.0.0-37-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is Clang, found in "/home/yjx/json-tutorial/tutorial01/build/CMakeFiles/3.15.3/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7773e/fast && /usr/bin/make -f CMakeFiles/cmTC_7773e.dir/build.make CMakeFiles/cmTC_7773e.dir/build
+make[1]: 进入目录“/home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_7773e.dir/testCCompiler.c.o
+/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang    -o CMakeFiles/cmTC_7773e.dir/testCCompiler.c.o   -c /home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_7773e
+/home/yjx/cmake/cmake-3.15.3-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7773e.dir/link.txt --verbose=1
+/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang      -rdynamic CMakeFiles/cmTC_7773e.dir/testCCompiler.c.o  -o cmTC_7773e 
+make[1]: 离开目录“/home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp”
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ccbde/fast && /usr/bin/make -f CMakeFiles/cmTC_ccbde.dir/build.make CMakeFiles/cmTC_ccbde.dir/build
+make[1]: Entering directory '/home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.o
+/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang   -v -o CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.o   -c /home/yjx/cmake/cmake-3.15.3-Linux-x86_64/share/cmake-3.15/Modules/CMakeCCompilerABI.c
+clang version 8.0.0 (tags/RELEASE_800/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.4.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.4.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.gcno -resource-dir /home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/clang/8.0.0 -internal-isystem /usr/local/include -internal-isystem /home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/clang/8.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.o -x c /home/yjx/cmake/cmake-3.15.3-Linux-x86_64/share/cmake-3.15/Modules/CMakeCCompilerABI.c -faddrsig
+clang -cc1 version 8.0.0 based upon LLVM 8.0.0 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/clang/8.0.0/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking C executable cmTC_ccbde
+/home/yjx/cmake/cmake-3.15.3-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccbde.dir/link.txt --verbose=1
+/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang     -v -rdynamic CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.o  -o cmTC_ccbde 
+clang version 8.0.0 (tags/RELEASE_800/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.4.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.4.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ccbde /usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7.4.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/7.4.0 -L/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../.. -L/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/7.4.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/include]
+    add: [/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/clang/8.0.0/include]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/clang/8.0.0/include] ==> [/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/clang/8.0.0/include]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/local/include;/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/clang/8.0.0/include;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_ccbde/fast && /usr/bin/make -f CMakeFiles/cmTC_ccbde.dir/build.make CMakeFiles/cmTC_ccbde.dir/build]
+  ignore line: [make[1]: Entering directory '/home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang   -v -o CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.o   -c /home/yjx/cmake/cmake-3.15.3-Linux-x86_64/share/cmake-3.15/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang version 8.0.0 (tags/RELEASE_800/final)]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.4.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.4.0]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [ "/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.gcno -resource-dir /home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/clang/8.0.0 -internal-isystem /usr/local/include -internal-isystem /home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/clang/8.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /home/yjx/json-tutorial/tutorial01/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.o -x c /home/yjx/cmake/cmake-3.15.3-Linux-x86_64/share/cmake-3.15/Modules/CMakeCCompilerABI.c -faddrsig]
+  ignore line: [clang -cc1 version 8.0.0 based upon LLVM 8.0.0 default target x86_64-unknown-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/clang/8.0.0/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking C executable cmTC_ccbde]
+  ignore line: [/home/yjx/cmake/cmake-3.15.3-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccbde.dir/link.txt --verbose=1]
+  ignore line: [/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang     -v -rdynamic CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.o  -o cmTC_ccbde ]
+  ignore line: [clang version 8.0.0 (tags/RELEASE_800/final)]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.4.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.4.0]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ccbde /usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7.4.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/7.4.0 -L/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../.. -L/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/7.4.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_ccbde] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7.4.0/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7.4.0] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7.4.0]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../..]
+    arg [-L/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/../lib] ==> dir [/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/../lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_ccbde.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7.4.0/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7.4.0] ==> [/usr/lib/gcc/x86_64-linux-gnu/7.4.0]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7.4.0/../../..] ==> [/usr/lib]
+  collapse library dir [/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/../lib] ==> [/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/7.4.0;/usr/lib/x86_64-linux-gnu;/lib/x86_64-linux-gnu;/lib64;/usr/lib;/home/yjx/clang/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib;/lib]
+  implicit fwks: []
+
+
