@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/yjx/json-tutorial/tutorial01/test.c" "/home/yjx/json-tutorial/tutorial01/build/CMakeFiles/leptjson_test.dir/test.c.o"
+  "/home/yjx/json-tutorial/tutorial02/leptjson.c" "/home/yjx/json-tutorial/tutorial02/build/CMakeFiles/leptjson.dir/leptjson.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -14,7 +14,6 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/yjx/json-tutorial/tutorial01/build/CMakeFiles/leptjson.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
