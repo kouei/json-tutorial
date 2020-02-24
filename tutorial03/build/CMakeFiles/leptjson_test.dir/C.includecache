@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yjx/json-tutorial/tutorial03/leptjson.h
+stddef.h
+-
+
+/home/yjx/json-tutorial/tutorial03/test.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+leptjson.h
+/home/yjx/json-tutorial/tutorial03/leptjson.h
+
