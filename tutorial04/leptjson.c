@@ -8,6 +8,7 @@
 #include <math.h>    /* HUGE_VAL */
 #include <stdlib.h>  /* NULL, malloc(), realloc(), free(), strtod() */
 #include <string.h>  /* memcpy() */
+#include <ctype.h>  /* tolower() */
 
 #ifndef LEPT_PARSE_STACK_INIT_SIZE
 #define LEPT_PARSE_STACK_INIT_SIZE 256
@@ -92,11 +93,59 @@ static int lept_parse_number(lept_context* c, lept_value* v) {
 
 static const char* lept_parse_hex4(const char* p, unsigned* u) {
     /* \TODO */
+
+    unsigned val = 0;
+    int i;
+    for(i = 0; i < 4; ++i) {
+        char ch = *p++;
+        ch = tolower(ch);
+
+        if('0' <= ch && ch <= '9') {
+            val = (val << 4) + ch - '0';
+        } else if('a' <= ch && ch <= 'f') {
+            val = (val << 4) + ch - 'a' + 10;
+        } else {
+            return NULL;
+        }
+    }
+
+    *u = val;
+
     return p;
 }
 
 static void lept_encode_utf8(lept_context* c, unsigned u) {
     /* \TODO */
+
+    char ch;
+    
+    assert(u <= 0x10FFFF);
+
+    if(u <= 0x007F) {
+        ch = u;
+        PUTC(c, ch);
+    } else if(u <= 0x07FF) {
+        ch = 0xC0 | ((u >> 6) & 0x1F);
+        PUTC(c, ch);
+        ch = 0x80 | (u & 0x3F);
+        PUTC(c, ch);
+    } else if(u <= 0xFFFF) {
+        ch = 0xE0 | ((u >> 12) & 0xF);
+        PUTC(c, ch);
+        ch = 0x80 | ((u >> 6) & 0x3F);
+        PUTC(c, ch);
+        ch = 0x80 | (u & 0x3F);
+        PUTC(c, ch);
+    } else {
+        ch = 0xF0 | ((u >> 18) & 0x7);
+        PUTC(c, ch);
+        ch = 0x80 | ((u >> 12) & 0x3F);
+        PUTC(c, ch);
+        ch = 0x80 | ((u >> 6) & 0x3F);
+        PUTC(c, ch);
+        ch = 0x80 | (u & 0x3F);
+        PUTC(c, ch);
+    }
 }
 
 #define STRING_ERROR(ret) do { c->top = head; return ret; } while(0)
@@ -128,7 +177,29 @@ static int lept_parse_string(lept_context* c, lept_value* v) {
                     case 'u':
                         if (!(p = lept_parse_hex4(p, &u)))
                             STRING_ERROR(LEPT_PARSE_INVALID_UNICODE_HEX);
+                        
                         /* \TODO surrogate handling */
+                        if(0xD800 <= u && u <= 0xDBFF) {
+                            unsigned H, L;
+
+                            H = u;
+
+                            if(*p++ != '\\')
+                                STRING_ERROR(LEPT_PARSE_INVALID_UNICODE_SURROGATE);
+
+                            if(*p++ != 'u')
+                                STRING_ERROR(LEPT_PARSE_INVALID_UNICODE_SURROGATE);
+
+                            if (!(p = lept_parse_hex4(p, &L)))
+                                STRING_ERROR(LEPT_PARSE_INVALID_UNICODE_HEX);
+
+                            if(!(0xDC00 <= L && L <= 0xDFFF))
+                                STRING_ERROR(LEPT_PARSE_INVALID_UNICODE_SURROGATE);
+
+                            u = 0x10000 + (H - 0xD800) * 0x400 + (L - 0xDC00);
+                        }
+
+
                         lept_encode_utf8(c, u);
                         break;
                     default:
