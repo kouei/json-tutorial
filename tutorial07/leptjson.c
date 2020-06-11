@@ -348,6 +348,37 @@ int lept_parse(lept_value* v, const char* json) {
 
 static void lept_stringify_string(lept_context* c, const char* s, size_t len) {
     /* ... */
+    int i;
+    assert(s);
+    PUTC(c, '"');
+
+    for(i = 0; i < len; ++i) {
+        unsigned char ch = s[i];
+
+        if(ch == '\"') {
+            PUTS(c, "\\\"", 2);
+        } else if(ch == '\\') {
+            PUTS(c, "\\\\", 2);
+        } else if(ch == '\b') {
+            PUTS(c, "\\b", 2);
+        } else if(ch == '\f') {
+            PUTS(c, "\\f", 2);
+        } else if(ch == '\n') {
+            PUTS(c, "\\n", 2);
+        } else if(ch == '\r') {
+            PUTS(c, "\\r", 2);
+        } else if(ch == '\t') {
+            PUTS(c, "\\t", 2);
+        } else if(ch < 0x20) {
+            char buf[7];
+            sprintf(buf, "\\u%04x", ch);
+            PUTS(c, buf, 6);
+        } else {
+            PUTC(c, ch);
+        }
+    }
+
+    PUTC(c, '"');
 }
 
 static void lept_stringify_value(lept_context* c, const lept_value* v) {
@@ -357,12 +388,42 @@ static void lept_stringify_value(lept_context* c, const lept_value* v) {
         case LEPT_TRUE:   PUTS(c, "true",  4); break;
         case LEPT_NUMBER: c->top -= 32 - sprintf(lept_context_push(c, 32), "%.17g", v->u.n); break;
         case LEPT_STRING: lept_stringify_string(c, v->u.s.s, v->u.s.len); break;
-        case LEPT_ARRAY:
+        case LEPT_ARRAY: {
             /* ... */
+            int i = 0;
+            size_t size = lept_get_array_size(v);
+
+            PUTC(c, '[');
+            for(i = 0; i < size; ++i) {
+                lept_value * value = lept_get_array_element(v, i);
+                lept_stringify_value(c, value);
+                if(i + 1 < size)
+                    PUTC(c, ',');
+            }
+            PUTC(c, ']');
+
             break;
-        case LEPT_OBJECT:
+        }
+        case LEPT_OBJECT: {
             /* ... */
+            int i = 0;
+            size_t size = lept_get_object_size(v);
+
+            PUTC(c, '{');
+            for(i = 0; i < size; ++i) {
+                const char * key = lept_get_object_key(v, i);
+                size_t key_len = lept_get_object_key_length(v, i);
+                lept_value * value = lept_get_object_value(v, i);
+                lept_stringify_string(c, key, key_len);
+                PUTC(c, ':');
+                lept_stringify_value(c, value);
+                if(i + 1 < size)
+                    PUTC(c, ',');
+            }
+            PUTC(c, '}');
+
             break;
+        }
         default: assert(0 && "invalid type");
     }
 }
