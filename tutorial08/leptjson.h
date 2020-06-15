@@ -51,6 +51,7 @@ void lept_copy(lept_value* dst, const lept_value* src);
 void lept_move(lept_value* dst, lept_value* src);
 void lept_swap(lept_value* lhs, lept_value* rhs);
 
+
 void lept_free(lept_value* v);
 
 lept_type lept_get_type(const lept_value* v);
@@ -93,5 +94,9 @@ size_t lept_find_object_index(const lept_value* v, const char* key, size_t klen)
 lept_value* lept_find_object_value(lept_value* v, const char* key, size_t klen);
 lept_value* lept_set_object_value(lept_value* v, const char* key, size_t klen);
 void lept_remove_object_value(lept_value* v, size_t index);
+
+// Added by kouei
+lept_member* lept_pushback_object_member(lept_value* v);
+void lept_popback_object_member(lept_value* v);
 
 #endif /* LEPTJSON_H__ */
